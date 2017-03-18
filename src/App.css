@@ -85,6 +85,7 @@
   padding-left: 30px !important;
   padding-right: 30px !important;
   font-weight: 600 !important;
+  font-size: 20px !important;
 }
 
 .button:hover, .button:focus, .button:active {

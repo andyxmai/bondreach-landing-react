@@ -10,6 +10,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-ladda": "^5.0.6",
     "react-toastr": "^2.8.2"
   },
   "scripts": {

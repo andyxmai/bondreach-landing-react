@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import LaddaButton, { XS, SLIDE_UP } from 'react-ladda';
 import {ToastContainer, ToastMessage} from 'react-toastr';
 import compose from './compose.png';
 import read from './read.png';
@@ -23,6 +24,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: false,
       email: '',
       error: '',
       success: '',
@@ -38,11 +40,12 @@ class App extends Component {
   }
 
   handleEmailSubmit(e) {
+    this.setState({isLoading: true})
     const email = this.state.email;
     const params = { email }
     apiClient.post('/v1/customers/beta/', params)
       .then((res) => {
-        this.setState({email: ''})
+        this.setState({email: '', isLoading: false})
         this.refs.container.success(
           "We will follow up shortly.",
           "Thank you for you interest!", {
@@ -51,6 +54,7 @@ class App extends Component {
         });
       })
       .catch((err) => {
+        this.setState({isLoading: false})
         this.refs.container.error(
           "Something happened. Please try a different email.",
           "Oh no!", {
@@ -94,7 +98,19 @@ class App extends Component {
               </div>
             </div>
             <div className="col-4 no-padding">
-              <button type="button" className="btn button no-radius" onClick={this.handleEmailSubmit}>Get Early Access</button>
+              <LaddaButton
+                className="button no-radius"
+                loading={this.state.isLoading}
+                onClick={this.handleEmailSubmit}
+                data-color="#00a7cf"
+                data-size={XS}
+                data-style={SLIDE_UP}
+                data-spinner-size={30}
+                data-spinner-color="#ddd"
+                data-spinner-lines={12}
+              >
+                Get Early Access
+              </LaddaButton>
             </div>
           </div>
         </div>
@@ -140,7 +156,19 @@ class App extends Component {
             </div>
           </div>
           <div className="col-4 no-padding">
-            <button type="button" className="btn button no-radius" onClick={this.handleEmailSubmit}>Get Early Access</button>
+            <LaddaButton
+              className="button no-radius"
+              loading={this.state.isLoading}
+              onClick={this.handleEmailSubmit}
+              data-color="#00a7cf"
+              data-size={XS}
+              data-style={SLIDE_UP}
+              data-spinner-size={30}
+              data-spinner-color="#ddd"
+              data-spinner-lines={12}
+            >
+              Get Early Access
+            </LaddaButton>
           </div>
         </div>
         <div className="section-space" />
