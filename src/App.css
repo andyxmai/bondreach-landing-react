@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.center {
+  text-align: center;
+}
+
+.email {
+  width: 50%;
+  margin: auto !important;
+}
+
+.email-section {
+  padding: 80px 0px;
+}
+
+.title {
+  font-size: 68px;
+  color: #00A7CF;
+  text-align: center;
+  letter-spacing: 2.5px;
+  padding: 50px 0px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 24px;
+  color: #464646;
+  letter-spacing: 1.5px;
+}
+
+.header {
+  color: #585858;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.image {
+  width: 712px;
+  height: 434px;
+}
+
+.no-radius {
+  border-radius: 0px !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.questions {
+  font-size: 24px;
+}
+
+.section-space {
+  margin: 60px 0px;
+}
+
+.button {
+  background-color: #00A7CF !important;
+  border: 1px solid #00A7CF !important;
+  color: white;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-weight: 600 !important;
+}
+
+.button:hover, .button:focus, .button:active {
+  background-color: #007995 !important;
+  color: white;
+  border-color: #007995 !important;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
