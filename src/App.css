@@ -32,7 +32,7 @@
 }
 
 .title {
-  font-size: 68px;
+  font-size: 5em;
   color: #00A7CF;
   text-align: center;
   letter-spacing: 2.5px;
@@ -41,7 +41,7 @@
 
 .subtitle {
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5em;
   color: #464646;
   letter-spacing: 1.5px;
 }
@@ -92,6 +92,14 @@
   background-color: #007995 !important;
   color: white;
   border-color: #007995 !important;
+}
+
+/* mobile phone */
+@media all and (max-width: 768px) {
+  .email {
+    width: 100%;
+    margin: auto !important;
+  }
 }
 
 @keyframes App-logo-spin {

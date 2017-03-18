@@ -66,7 +66,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <ToastContainer ref="container"
                           toastMessageFactory={ToastMessageFactory}
                           className="toast-top-right" />
@@ -121,7 +121,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col">
-            <div className="imageContainer"><img src={read} className="image" alt="Read" /></div>
+            <div className="imageContainer"><img src={read} className="image img-responsive" alt="Read" /></div>
           </div>
         </div>
 
@@ -134,7 +134,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col">
-            <div className="imageContainer"><img src={compose} className="image" alt="Compose" /></div>
+            <div className="imageContainer"><img src={compose} className="image img-responsive" alt="Compose" /></div>
           </div>
         </div>
 
