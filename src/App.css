@@ -32,7 +32,7 @@
 }
 
 .title {
-  font-size: 5em;
+  font-size: 68px;
   color: #00A7CF;
   text-align: center;
   letter-spacing: 2.5px;
@@ -41,7 +41,7 @@
 
 .subtitle {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 24px;
   color: #464646;
   letter-spacing: 1.5px;
 }
@@ -59,7 +59,6 @@
 
 .image {
   width: 712px;
-  height: 434px;
 }
 
 .no-radius {
@@ -96,9 +95,34 @@
 
 /* mobile phone */
 @media all and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .subtitle-line {
+    padding: 5px 0px;
+  }
+  .questions {
+    font-size: 16px;
+  }
   .email {
     width: 100%;
     margin: auto !important;
+  }
+  .image {
+    width: 100%;
+  }
+  .header {
+    font-size: 14px;
+    padding: 5px 0px;
+  }
+  .button {
+    padding: 5px 0px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 17px !important;
   }
 }
 
