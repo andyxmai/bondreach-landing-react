@@ -46,6 +46,10 @@
   letter-spacing: 1.5px;
 }
 
+.subtitle-line {
+  padding: 2px 0px;
+}
+
 .header {
   color: #585858;
   font-size: 16px;

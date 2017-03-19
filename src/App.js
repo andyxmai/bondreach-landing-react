@@ -78,13 +78,13 @@ class App extends Component {
         <div className="row">
           <div className="col subtitle">
             <div className="subtitle-line">The only commercial real estate specialized CRM tool that works from your inbox.</div>
-            <div className="subtitle-line">Say goodbye to customizing tools and entering data.</div>
+            <div className="subtitle-line">No more customizing tools and entering data on separate applications.</div>
           </div>
         </div>
         <div className="email-section">
           <div className="row center header">
             <div className="col">
-              <div>Free during our limited beta period. For investors and brokers only.</div>
+              <div>Free during our limited beta period. For investors and brokers.</div>
             </div>
           </div>
           <div className="row email center">
