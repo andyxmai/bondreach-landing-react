@@ -88,29 +88,29 @@ class App extends Component {
             </div>
           </div>
           <div className="row email center">
-            <div className="col-8">
-              <div className="form-group">
+            <div className="col-lg-12">
+              <div className="input-group">
                 <input type="email"
                   className="form-control no-radius"
                   placeholder="Enter email address"
                   onChange={this.handleEmailChanged}
                   value={this.state.email} />
+                <span className="input-group-btn">
+                  <LaddaButton
+                    className="button no-radius"
+                    loading={this.state.isLoading}
+                    onClick={this.handleEmailSubmit}
+                    data-color="#00a7cf"
+                    data-size={XS}
+                    data-style={SLIDE_UP}
+                    data-spinner-size={30}
+                    data-spinner-color="#ddd"
+                    data-spinner-lines={12}
+                  >
+                    Get Early Access
+                  </LaddaButton>
+                </span>
               </div>
-            </div>
-            <div className="col-4 no-padding">
-              <LaddaButton
-                className="button no-radius"
-                loading={this.state.isLoading}
-                onClick={this.handleEmailSubmit}
-                data-color="#00a7cf"
-                data-size={XS}
-                data-style={SLIDE_UP}
-                data-spinner-size={30}
-                data-spinner-color="#ddd"
-                data-spinner-lines={12}
-              >
-                Get Early Access
-              </LaddaButton>
             </div>
           </div>
         </div>
@@ -146,29 +146,29 @@ class App extends Component {
           </div>
         </div>
         <div className="row email center">
-          <div className="col-8">
-            <div className="form-group">
+          <div className="col-lg-12">
+            <div className="input-group">
               <input type="email"
                 className="form-control no-radius"
                 placeholder="Enter email address"
                 onChange={this.handleEmailChanged}
                 value={this.state.email} />
+              <span className="input-group-btn">
+                <LaddaButton
+                  className="button no-radius"
+                  loading={this.state.isLoading}
+                  onClick={this.handleEmailSubmit}
+                  data-color="#00a7cf"
+                  data-size={XS}
+                  data-style={SLIDE_UP}
+                  data-spinner-size={30}
+                  data-spinner-color="#ddd"
+                  data-spinner-lines={12}
+                >
+                  Get Early Access
+                </LaddaButton>
+              </span>
             </div>
-          </div>
-          <div className="col-4 no-padding">
-            <LaddaButton
-              className="button no-radius"
-              loading={this.state.isLoading}
-              onClick={this.handleEmailSubmit}
-              data-color="#00a7cf"
-              data-size={XS}
-              data-style={SLIDE_UP}
-              data-spinner-size={30}
-              data-spinner-color="#ddd"
-              data-spinner-lines={12}
-            >
-              Get Early Access
-            </LaddaButton>
           </div>
         </div>
         <div className="section-space" />
