@@ -142,7 +142,7 @@ class App extends Component {
 
         <div className="row">
           <div className="col">
-            <div className="center header">and many more...</div>
+            <div className="center header">Deep sync with your calendar & contacts, tag emails, and many more...</div>
           </div>
         </div>
         <div className="row email center">
