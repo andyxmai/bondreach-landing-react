@@ -4,15 +4,19 @@ import LaddaButton, { XS, SLIDE_UP } from 'react-ladda';
 import {ToastContainer, ToastMessage} from 'react-toastr';
 import compose from './compose.png';
 import read from './read.png';
+import notes from './notes.png';
 import './App.css';
 
 const ToastMessageFactory = React.createFactory(ToastMessage.animation);
 
+
 var baseURL = ''
 if (process.env.NODE_ENV === 'production') {
   baseURL = 'https://api.bondreach.com'
+  window.heap.load("438302211");
 } else {
   baseURL = 'http://localhost:8000'
+  window.heap.load("1390131832");
 }
 
 const apiClient = axios.create({
@@ -122,6 +126,19 @@ class App extends Component {
         <div className="row">
           <div className="col">
             <div className="imageContainer"><img src={read} className="image img-responsive" alt="Read" /></div>
+          </div>
+        </div>
+
+        <div className="section-space" />
+
+        <div className="row">
+          <div className="col">
+            <div className="header">Take notes on your contacts and search for them later.</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="imageContainer"><img src={notes} className="image img-responsive" alt="Notes" /></div>
           </div>
         </div>
 
