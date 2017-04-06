@@ -76,8 +76,11 @@
 
 .navbar-custom {
   background-color: white;
-  border-bottom: 1px solid #D7DADA;
   width: 100%;
+}
+
+.bordered {
+  border-bottom: 1px solid #D7DADA;
 }
 
 .no-radius {

@@ -32,15 +32,39 @@ class App extends Component {
       email: '',
       error: '',
       success: '',
+      hasScrolled: false,
     };
     this.handleEmailChanged = this.handleEmailChanged.bind(this)
     this.handleEmailSubmit = this.handleEmailSubmit.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+    this.getNavbarStyle = this.getNavbarStyle.bind(this)
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleEmailChanged(e) {
     this.setState({
       email: e.target.value
     })
+  }
+
+  handleScroll(event) {
+    const scrollTop = event.srcElement.body.scrollTop
+    if (scrollTop > 0) {
+      if (this.state.hasScrolled !== true) {
+        this.setState({hasScrolled: true})
+      }
+    } else {
+      if (this.state.hasScrolled !== false) {
+        this.setState({hasScrolled: false})
+      }
+    }
   }
 
   handleEmailSubmit(e) {
@@ -68,10 +92,22 @@ class App extends Component {
       });
   }
 
+  getNavbarStyle() {
+    var navbarStyle = {
+      position: 'fixed',
+      zIndex: '1000',
+    }
+    if (this.state.hasScrolled) {
+      navbarStyle['borderBottom'] = '1px solid #D7DADA'
+    }
+
+    return navbarStyle
+  }
+
   render() {
     return (
       <div>
-        <nav className="navbar navbar-toggleable-md navbar-light navbar-custom" style={{position: "fixed", zIndex: "1000"}}>
+        <nav className="navbar navbar-toggleable-md navbar-light navbar-custom" style={this.getNavbarStyle()}>
           <h1 className="navbar-brand mb-0 brand-custom">BondReach</h1>
         </nav>
         <div className="container-fluid main">
