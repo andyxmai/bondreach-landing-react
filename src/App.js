@@ -70,25 +70,100 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <ToastContainer ref="container"
-                          toastMessageFactory={ToastMessageFactory}
-                          className="toast-top-right" />
-        <div className="row">
-          <div className="col title">
-            BondReach
+      <div>
+        <nav className="navbar navbar-toggleable-md navbar-light navbar-custom" style={{position: "fixed", zIndex: "1000"}}>
+          <h1 className="navbar-brand mb-0 brand-custom">BondReach</h1>
+        </nav>
+        <div className="container-fluid main">
+          <ToastContainer ref="container"
+                            toastMessageFactory={ToastMessageFactory}
+                            className="toast-top-right" />
+          <div className="row">
+            <div className="col title">
+              Modernize your rolodex
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col subtitle">
-            <div className="subtitle-line">The only commercial real estate specialized CRM tool that works from your inbox.</div>
-            <div className="subtitle-line">No more customizing tools and entering data on separate applications.</div>
+          <div className="row">
+            <div className="col subtitle">
+              <div className="subtitle-line">The only commercial real estate specialized CRM tool that works from your inbox.</div>
+              <div className="subtitle-line">No more customizing tools and entering data on separate applications.</div>
+            </div>
           </div>
-        </div>
-        <div className="email-section">
-          <div className="row center header">
+          <div className="email-section">
+            <div className="row center header">
+              <div className="col">
+                <div>Free during our limited beta period. For investors and brokers.</div>
+              </div>
+            </div>
+            <div className="row email center">
+              <div className="col-lg-12">
+                <div className="input-group">
+                  <input type="email"
+                    className="form-control no-radius"
+                    placeholder="Enter email address"
+                    onChange={this.handleEmailChanged}
+                    value={this.state.email} />
+                  <span className="input-group-btn">
+                    <LaddaButton
+                      className="button no-radius"
+                      loading={this.state.isLoading}
+                      onClick={this.handleEmailSubmit}
+                      data-color="#00a7cf"
+                      data-size={XS}
+                      data-style={SLIDE_UP}
+                      data-spinner-size={30}
+                      data-spinner-color="#ddd"
+                      data-spinner-lines={12}
+                    >
+                      Get Early Access
+                    </LaddaButton>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col">
-              <div>Free during our limited beta period. For investors and brokers.</div>
+              <div className="header">Client information right in your email so you can have richer interactions when alerted.</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="imageContainer"><img src={read} className="image img-responsive" alt="Read" /></div>
+            </div>
+          </div>
+
+          <div className="section-space" />
+
+          <div className="row">
+            <div className="col">
+              <div className="header">Take notes on your contacts and search for them later.</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="imageContainer"><img src={notes} className="image img-responsive" alt="Notes" /></div>
+            </div>
+          </div>
+
+          <div className="section-space" />
+
+          <div className="row">
+            <div className="col">
+              <div className="header">Target your clients for each deal with higher precision, with no extra effort.</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="imageContainer"><img src={compose} className="image img-responsive" alt="Compose" /></div>
+            </div>
+          </div>
+
+          <div className="section-space" />
+
+          <div className="row">
+            <div className="col">
+              <div className="center header">Deep sync with your calendar & contacts, tag emails, and many more...</div>
             </div>
           </div>
           <div className="row email center">
@@ -117,90 +192,20 @@ class App extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="header">Client information right in your email so you can have richer interactions when alerted.</div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="imageContainer"><img src={read} className="image img-responsive" alt="Read" /></div>
-          </div>
-        </div>
+          <div className="section-space" />
 
-        <div className="section-space" />
-
-        <div className="row">
-          <div className="col">
-            <div className="header">Take notes on your contacts and search for them later.</div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="imageContainer"><img src={notes} className="image img-responsive" alt="Notes" /></div>
-          </div>
-        </div>
-
-        <div className="section-space" />
-
-        <div className="row">
-          <div className="col">
-            <div className="header">Target your clients for each deal with higher precision, with no extra effort.</div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="imageContainer"><img src={compose} className="image img-responsive" alt="Compose" /></div>
-          </div>
-        </div>
-
-        <div className="section-space" />
-
-        <div className="row">
-          <div className="col">
-            <div className="center header">Deep sync with your calendar & contacts, tag emails, and many more...</div>
-          </div>
-        </div>
-        <div className="row email center">
-          <div className="col-lg-12">
-            <div className="input-group">
-              <input type="email"
-                className="form-control no-radius"
-                placeholder="Enter email address"
-                onChange={this.handleEmailChanged}
-                value={this.state.email} />
-              <span className="input-group-btn">
-                <LaddaButton
-                  className="button no-radius"
-                  loading={this.state.isLoading}
-                  onClick={this.handleEmailSubmit}
-                  data-color="#00a7cf"
-                  data-size={XS}
-                  data-style={SLIDE_UP}
-                  data-spinner-size={30}
-                  data-spinner-color="#ddd"
-                  data-spinner-lines={12}
-                >
-                  Get Early Access
-                </LaddaButton>
-              </span>
+          <div className="row">
+            <div className="col">
+              <div className="center questions header">Questions?</div>
             </div>
           </div>
-        </div>
-        <div className="section-space" />
-
-        <div className="row">
-          <div className="col">
-            <div className="center questions header">Questions?</div>
+          <div className="row">
+            <div className="col">
+              <div className="center">Email <b>bondreachRE@gmail.com</b></div>
+            </div>
           </div>
+          <br />
         </div>
-        <div className="row">
-          <div className="col">
-            <div className="center">Email <b>bondreachRE@gmail.com</b></div>
-          </div>
-        </div>
-        <br />
       </div>
     );
   }
